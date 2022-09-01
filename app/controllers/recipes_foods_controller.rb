@@ -13,7 +13,6 @@ class RecipesFoodsController < ApplicationController
     else
       puts 'error'
     end
-
   end
 
   def destroy
@@ -25,4 +24,3 @@ class RecipesFoodsController < ApplicationController
     params.require(:recipe_food).permit(:quantity, :food_id)
   end
 end
- 
