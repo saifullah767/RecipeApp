@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-
-  get 'shoppings/index'
+  # get 'shoppings/index'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -9,9 +8,13 @@ Rails.application.routes.draw do
 
   root 'users#index'
   resources :users, only: %i[index show] do
-    resources :posts, only: %i[index show new create destroy] do
-      resources :comments, only: %i[new create destroy]
-      resources :likes, only: %i[new create]
+    resources :foods, only: %i[new create destroy]
+    resources :recipes, only: %i[index show new create destroy]  do
+      resources :recipes_foods, only: %i[index show]
     end
+  resources :shoppings, only:[:index]
+
   end
+
+
 end
