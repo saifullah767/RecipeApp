@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyApp</title>
+    <title>RecipeApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
@@ -14,15 +14,14 @@
 
   <body>
 
-  <%= render 'shared/menu', locals: {user: current_user} %>
+    <%= render 'shared/menu', locals: {user: current_user} %>
 
-
-  <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-<p class="alert alert-danger"><%= alert %></p>
-<% end %>
-<%= yield %>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <%= yield %>
   </body>
 </html>
