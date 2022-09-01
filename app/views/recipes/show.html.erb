@@ -9,7 +9,7 @@
 
 <%= link_to "Generate shopping list", user_recipe_shoppings_path(@recipe.user_id, @recipe.id)%> <br><br>
 
-<%= link_to 'Add Food Ingredients', new_user_recipe_recipes_food_path(@recipe.user_id, @recipe.id) %>
+<%= link_to 'Add Food Ingredients', new_user_recipe_recipes_food_path(current_user.id, @recipe.id) %>
 
 <br>
 <br>
@@ -30,8 +30,8 @@
         <td><%= rf.quantity %></td>
         <td><%= rf.food.price %></td>
         <td><%= rf.id %></td>
-        <td><%= button_to 'Delete', user_recipe_path(@recipe.user_id, @recipe.id), method: :delete %></td>
-      </tr>
+        <%= link_to 'Remove', user_recipe_recipes_food_path(current_user.id, @recipe.id, rf.id), method: :delete %>
+        </tr>
     <% end %>  
   </tbody>
 </table>

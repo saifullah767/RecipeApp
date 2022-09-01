@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # get 'shoppings/index'
-
+  # get 'home/index'
+  
+  get 'recipes_foods/new'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
 
-  get 'recipes_foods/new'
 
   root 'users#index'
+  devise_for :users
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
   resources :users do
     resources :foods, except: %i[:edit]
     resources :recipes, except: %i[:edit]  do
@@ -19,6 +22,4 @@ Rails.application.routes.draw do
 
   resources :publics, only:[:index]
   end
-
-
 end
