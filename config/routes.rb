@@ -1,6 +1,4 @@
-Rails.application.routes.draw do
-  # get 'home/index'
-  
+Rails.application.routes.draw do  
   get 'recipes_foods/new'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
