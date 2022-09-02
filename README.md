@@ -11,10 +11,6 @@
 - Postgress
 - Capybara/Rspec
 
-## Live Demo (Link for Recipe App)
-
-[Live Demo]()
-
 ## Development set up
 
 Clone Repository using
@@ -71,4 +67,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
