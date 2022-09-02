@@ -1,62 +1,59 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Recipe App
 
-# Project Name
+## Description
 
-> Description the project.
-
+> The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
+- Ruby on Rails
+- Postgress
+- Capybara/Rspec
 
-## Live Demo (if available)
+## Development set up
 
-[Live Demo Link](https://livedemo.com)
+Clone Repository using
 
+`git clone https://github.com/saifullah767/RecipeApp.git`
 
-## Getting Started
+Move into project directory
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+`cd recipe-app`
 
+### Setup Database 
+- Make sure that your Postgres database is installed.
+- Open the file config\database.yml
+- Modify the connection parameters to point your Postgres database:
 
-To get a local copy up and running follow these simple example steps.
+    `username: [your_user]`
+    `password: [your_password]`
 
-### Prerequisites
+- If required drop existing database : `rake db:drop`
+- Create databases: `rake db:create`
+- Create db structure including tables : `rake db:migrate`
+- If required seed initial data (stored in db\seeds.rb file): `rails db:seed`
 
-### Setup
+### Run Tests
 
-### Install
+- Install rspec: `bundle install`
+- Run all tests: `rspec spec`
+- Run all tests and show test documentation: `rspec spec --format documentation`
 
-### Usage
+### Run App
+- If required (Not for testing) run `rails server`
+- Visit http://localhost:3000/ in your browser!
 
-### Run tests
+## Author
 
-### Deployment
+👤 **Saifullah**
 
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@saifullah767](https://github.com/saifullah767)
+- LinkedIn: [saifkj](https://linkedin.com/in/saifkj)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
@@ -66,10 +63,8 @@ Give a ⭐️ if you like this project!
 
 - Hat tip to anyone whose code was used
 - Inspiration
-- etc
+
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
